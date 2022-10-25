@@ -47,6 +47,7 @@ const modalToggle = () => {
 const showDetails = (type, name, number, photo) => {
     const modal = document.getElementById('modal');
     
+    modal.removeAttribute('class');
     modal.classList.add(type);
 
     document.getElementById('modal-overlay').classList.add('active');
