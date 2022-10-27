@@ -5,9 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link rel="shortcut icon" href="assets/img/pokedex.svg" type="image/x-icon">
+        <link rel="shortcut icon" href="assets/img/icon.ico" type="image/x-icon">
 
-        <title>Pokedex</title>
+        <title>Pokédex</title>
 
         <!-- NORMALIZE CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -18,23 +18,52 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
                 
         <!-- CSS -->
-        <link rel="stylesheet" href="assets/css/global.css">
         <link rel="stylesheet" href="assets/css/pokedex.css">
         <link rel="stylesheet" href="assets/css/details.css">
+        <link rel="stylesheet" href="assets/css/global.css">
     </head>
     <body>
         <section class="content">
-            <div>
-                <img src="assets/img/pokedex.svg" alt="">
-                <h1>Pokedex</h1>
+            <div class="header">
+                <img src="assets/img/logo.png" alt="">
+                <input type="text" name="txtSearch" id="idSearch"
+                    placeholder="type a pokemon name or number then press enter...">
             </div>
-            <ol id="pokemonList" class="pokemons"></ol>
+            <hr>
+            <div class="type-filter">
+                <ol class="types">
+                    <li class="type grass">grass</li>
+                    <li class="type poison">poison</li>
+                    <li class="type fire">fire</li>
+                    <li class="type flying">flying</li>
+                    <li class="type water">water</li>
+                    <li class="type bug">bug</li>
+                    <li class="type normal">normal</li>
+                    <li class="type electric">electric</li>
+                    <li class="type ground">ground</li>
+                    <li class="type ice">ice</li>
+                    <li class="type fighting">fighting</li>
+                    <li class="type psychic">psychic</li>
+                    <li class="type dark">dark</li>
+                    <li class="type rock">rock</li>
+                    <li class="type ghost">ghost</li>
+                    <li class="type steel">steel</li>
+                    <li class="type dragon">dragon</li>
+                    <li class="type fairy">fairy</li>
+                    <li class="type all">all</li>
+                </ol>
+            </div>
+            <hr>
+            <div id="loading"></div>
+            <ol id="pokemonList" class="pokemons">
+                
+            </ol>
             <div class="pagination">
                 <button id="loadMore" type="button">Load More</button>
             </div>
         </section>
 
-        <!--MODAL-->
+        <!-- POKEMON DETAILS -->
         <div id="modal-overlay">
             <div id="modal">
                 <div>
@@ -53,10 +82,8 @@
                 </button>
             </div>
         </div>
-        <!--FIM MODAL-->
 
         <!-- SCRIPTS -->
-        <script src="assets/js/pokemon-model.js"></script>
         <script src="assets/js/poke-api.js"></script>
         <script src="assets/js/main.js"></script>
     </body>

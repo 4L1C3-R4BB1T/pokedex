@@ -6,24 +6,99 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f6f8fc;
+    background-image: linear-gradient(rgb(31, 29, 127), rgb(25, 24, 90));
 }
 
 .content {
     height: auto;
     width: 100vw;
-    padding: 1rem;
+    padding: 2rem;
     background-color: #fff;
-    box-shadow: 0 0 10px rgb(116, 116, 116);
+    box-shadow: 0 0 10px #fff;
 }
 
-.content div {
+.content .header {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .content div img {
     height: 80px;
-    margin-left: -10px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.content input {
+    height: 2.5em;
+    width: 50%;
+    border-radius: 20px;
+    color: #000;
+    padding: 20px;
+    padding-right: 7%;
+    background: url('../img/lupa.png') no-repeat right;
+    background-size: 25px;
+    background-position: 95% 50%;
+}
+
+.content hr {
+    height: .1em;
+    width: 98%;
+    margin: 2em auto;
+    border: none;
+    background-color: #ccc;
+}
+
+.content .type-filter .types {
+    margin-left: .5em;
+    display: flex;
+    gap: .6em 1.3em;
+    flex-wrap: wrap;
+}
+
+.content .type-filter .types .type {
+    list-style: none;
+}
+
+.content .type-filter .types .type {
+    width: 80px;
+    margin: .5rem 0;
+    padding: .25rem .5rem;
+    font-size: .9rem;
+    color: #fff;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+    border: 2px solid #000;
+    box-shadow: 4px 4px rgb(116, 116, 116);
+    text-shadow: 3px 3px 4px #333;
+    cursor: pointer;
+}
+
+.content .type-filter .types .type:hover {
+    filter: brightness(0.7);
+}
+
+.content .type-filter .types .type:active {
+    position: relative;
+    left: 2px;
+    top: 2px;
+    filter: brightness(.5);
+}
+
+.content #loading {
+    width: 4rem;
+    height: 4rem;
+    border: 5px solid #f3f3f3;
+    border-top: 6px solid #9c41f2;
+    border-radius: 100%;
+    margin: 10em auto;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 @media screen and (min-width: 992px) {
@@ -32,6 +107,7 @@ body {
         margin: 1rem auto;
         border-radius: 1rem;
         padding-bottom: 2.5rem;
+        border: solid 4px black;
     }
 }
 
