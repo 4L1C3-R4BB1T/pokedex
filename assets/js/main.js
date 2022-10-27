@@ -10,6 +10,8 @@ const limit = 100;
 let count = 1;
 let selectedType = '';
 
+let aux = 0;
+
 function addLeadingZeros(num, totalLength) {
     return String(num).padStart(totalLength, '0');
 }
@@ -31,7 +33,8 @@ const loadPokemonItens = (offset, limit, type = '') => {
         
         // gambiarra suprema
         if (pokemons.length === 0) {
-            loadPokemonItens(offset, 500, type);
+            aux += 500;
+            loadPokemonItens(offset, aux, type);
             return;
         }
 
