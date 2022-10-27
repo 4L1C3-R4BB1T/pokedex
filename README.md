@@ -1,7 +1,6 @@
 ## ✨ Sobre
 
-Pokedex usando html, css e javascript desenvolvida com base no projeto **Construindo uma Pokédex com JavaScript** da [DIO](https://www.dio.me "Site da DIO").  
-Utiliza-se a API PokéAPI para requisitar os dados dos pokemons.
+Pokedex usando html, css e javascript desenvolvida com base no projeto **Construindo uma Pokédex com JavaScript** da [DIO](https://www.dio.me "Site da DIO").   Utiliza-se a API PokéAPI para requisitar os dados dos pokemons.
 
 ---
 
